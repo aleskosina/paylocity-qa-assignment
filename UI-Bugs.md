@@ -41,6 +41,35 @@ Incorrect employee data is presented to the user, which may lead to confusion an
 
 ## UI-002
 ### Title
+No feedback is provided when invalid values are entered in Dependents field
+
+### Severity
+High
+
+### Description
+When invalid input (e.g., non-numeric values, negative numbers, or empty input) is entered into the Dependents field and the user attempts to submit the form, no validation message or feedback is displayed.
+
+### Steps to Reproduce
+1. Log in to the application
+2. Click Add Employee
+3. Enter valid First Name and Last Name
+4. Enter invalid value into Dependents:
+   - `abc`
+   - `-1`
+   - empty
+5. Click Add
+
+### Expected Result
+The application should provide clear feedback to the user indicating that the input is invalid (e.g., "Dependents must be a non-negative integer").
+
+### Actual Result
+No feedback or validation message is displayed. The form remains open and no action occurs.
+
+### Impact
+Users receive no guidance on how to correct their input, leading to confusion and poor user experience.
+
+## UI-003
+### Title
 Edit Employee modal incorrectly labeled as "Add Employee"
 
 ### Severity
