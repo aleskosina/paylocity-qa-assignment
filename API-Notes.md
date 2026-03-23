@@ -44,4 +44,6 @@ Important note:
 - The API uses the field name `dependants` (not `dependents`).
 
 ## Validation Notes
-- Negative `dependants` values are rejected with HTTP `400 Bad Request`.
+
+- According to the API contract, negative `dependants` values should be rejected with HTTP `400 Bad Request`.
+- In practice, the API accepts invalid values and normalizes them, which represents a validation defect.
