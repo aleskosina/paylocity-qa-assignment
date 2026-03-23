@@ -26,3 +26,23 @@ The main issues identified include:
 - Missing user feedback for invalid input in the Dependents field
 - Inconsistent labeling in the Edit Employee modal
 - API accepts invalid input and silently modifies data
+
+## API Notes
+
+The API test design was based on the provided Swagger documentation.
+
+During implementation, the Swagger contract was used to identify:
+- the correct employee endpoint: `/api/Employees`
+- required request fields such as `username`
+- the correct field name `dependants`
+- expected validation behavior for invalid input
+
+## Local Configuration
+
+API tests require an authentication token.
+Create a local `cypress.env.json` file in the project root:
+
+```json
+{
+  "authToken": "Basic <token I got via email>"
+}
